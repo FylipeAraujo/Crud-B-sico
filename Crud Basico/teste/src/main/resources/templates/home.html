@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <br><br>
+    <header>
+        <h1>Bem-vindo</h1>
+    </header>
+    <br><br>
+    <section>
+        <form action="">
+            <h3>Selecione uma opção</h3>
+
+           <br> <br>
+           <a th:href="@{/Produtos}"> <input type="button" value="Adicionar Produto"></a>
+           <br><br>
+           <a th:href="@{/Pedidos}"> <input type="button" value="Lista de produtos"></a>
+            
+        </form>
+    </section>
+
+    
+</body>
+</html>

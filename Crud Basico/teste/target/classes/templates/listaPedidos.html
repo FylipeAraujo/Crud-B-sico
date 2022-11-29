@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/listaPedidos.css">
+    <title>Lista de Pedidos</title>
+</head>
+<body>
+    <br><br>
+    <form >
+    
+        <h2>Lista de Pedidos</h2>
+
+       <a th:href="@{/salvar-pedido}"> <input type="button" value="Novo pedido"></a>
+
+        <br><br>
+
+       <table border="1">
+        <tr>
+            <th><input type="checkbox" name="" ></th>
+            <th>Data</th>
+            <th>QTD de Produtos</th>
+            <th>Status</th>
+            <th>Valor</th>
+            <th>Ação</th>
+        </tr>
+        <tr>
+            <th><input type="checkbox" name=""></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th><input type="button" value="Editar"><input  type="button" value="Excluir"></th>
+        </tr>
+       </table>
+    </form>
+
+    
+</body>
+</html>

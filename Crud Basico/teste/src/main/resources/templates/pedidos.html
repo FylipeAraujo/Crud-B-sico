@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pedido.css">
+    <title>Novo Pedido</title>
+</head>
+<body>
+    <br><br>
+    
+        <h2>Produtos Cadastrados</h2>
+
+        <input type="button" value="Novo Produto">
+
+        <br>
+
+            <table border="1" th:each="prod : ${produtos}">
+                <tr>
+                    <th><input type="checkbox" name="" id=""></th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <th ></th>
+                    <th th:text="${prod.nome}" > </th>
+                    <th th:text="${prod.descricao}" ></th>
+                    <th th:text="${prod.valor}"></th>
+                    
+                    <form  method="POST" th:action="@{/excluir}" th:object="${produto}">
+	                    <div>
+	                    	<input  th:value="@{{id}(id=${prod.id})}" class="int" type="hidden" name="id">
+	                    	<button type="submit">Excluir</button>
+	                    </div>
+	                
+                    </form>
+                </tr>
+               </table>
+
+               <br><br>
+
+        
+</body>
+</html>
